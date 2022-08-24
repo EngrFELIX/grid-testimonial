@@ -16,7 +16,7 @@ body {
 }
 
 .testimonial-container {
-  max-width: fit-content;
+  min-width: fit-content;
   display: grid;
   grid-auto-rows: 300px;
   grid-auto-columns: 250px;
@@ -116,4 +116,46 @@ img[name="patrick"] {
   grid-area: patrick;
   background-color: hsl(219, 29%, 14%);
   color: #fff;
+}
+
+
+@media screen and (max-width: 912px) {
+  body {
+    padding: 50px 0px;
+  }
+  
+.testimonial-container {
+  display: grid;
+  height: fit-content;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  grid-template-areas:
+   'daniel'
+   'jonathan'
+   'jeanette'
+   'patrick'
+   'kira';
+   margin: auto;
+   padding : 3px 20px;
+ 
+}
+
+.daniel_card {
+  grid-area: daniel;
+}
+.jonathan_card {
+  grid-area: jonathan;
+}
+
+.jeanette_card {
+  grid-area: jeanette;
+}
+.patrick_card {
+  grid-area: patrick;
+}
+.kira_card {
+  grid-area: kira;
+}
+
+
 }
